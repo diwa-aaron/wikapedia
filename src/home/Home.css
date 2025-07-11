@@ -1,0 +1,129 @@
+/*REMOVE SPACE FROM PAGE*/
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/*MAIN BODY OF THE PAGE*/
+body{
+    min-height: 100dvh;
+    background: #FFFAFE;
+}
+
+/*CURVED BG AND GRADIENT*/
+.curved-background {
+    background: linear-gradient(
+        -60deg,
+        #c8eefb 0%,
+        #bdb3fc 20%,
+        #ecbcfc 40%,
+        #dfc2fb 60%,
+        #a3b0fc 80%,
+        #c8eefb 100%
+    );
+    clip-path: ellipse(101% 102% at 0% 0%);
+    background-size: 200% 200%;
+    height: 100vh;
+    display: flex;
+    animation: bg 5s ease infinite;
+}
+
+/*GRADIENT ANIMATION*/
+@keyframes bg{
+    0%{
+    background-position: 0% 50%;
+    }
+    50%{
+    background-position: 100% 100%;
+    }
+    100%{
+    background-position: 0% 50%;
+    }
+}
+
+/*BOOK IMAGE*/
+.book-image {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  right: 7%;
+  bottom: 0;
+  height: 95%;
+  pointer-events: none;
+}
+
+/*TEXT AND BUTTON DIV*/
+.content {
+    position: absolute;
+    top: 35%;
+    margin-left: 0.5vw; 
+    align-items: center;
+    max-width: 40%;
+    color: #504B4E;
+    padding: 0 10% 0 10%;
+}
+
+/*HEADER (TITLE)*/
+h1 {
+    font-size: clamp(1.8rem, 10vw, 5rem);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/*PARAGRAPH (DESCRIPTION)*/
+p {
+    color: #000000;
+    opacity: 50%;
+}
+
+/*BUTTON*/
+.content button {
+    margin-top: 50px;
+    padding: 15px 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, #5c8df6, #9ba9ff);
+    border: none;
+    border-radius: 50px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+/*WHEN PAGE IS TABLET VIEW*/
+@media(max-width: 1100px) {
+    .book-image {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 80vw;
+        max-width: 100%;
+        height: auto;
+        opacity: 50%;
+    }
+
+    .curved-background {
+        height: 100dvh;
+        clip-path: ellipse(150% 120% at 50% 0%); /* Adjusted to fill full screen */
+    }
+
+    .content {
+        margin: 0 !important;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 1rem; /* adjust as needed to prevent line break */
+        white-space: nowrap; /* optional: prevents the text from wrapping */
+    }
+}
