@@ -22,7 +22,7 @@ function Header() {
               {/*HEADER*/}
               <li><img src={logo} alt="Wikapedia logo" className="logo" /></li>
               <li class="wikapedia">Wikapedia</li>
-              <li class= "hide"><a href="#">HOME</a></li>
+              <li class= "hide"><a href="../home/Home.jsx">HOME</a></li>
               <li class= "hide"><a href="#">DIALECTS</a></li>
               <li class= "hide"><a href="#">ABOUT</a></li>
 
@@ -49,7 +49,7 @@ function Header() {
 
             {/*SIDEBAR*/}
             <ul className={`sidebar ${isSidebarVisible ? 'show' : ''}`}>
-              <li><a href="#">HOME</a></li>
+              <li><a href="../home/Home.jsx">HOME</a></li>
               <li><a href="#">DIALECTS</a></li>
               <li><a href="#">ABOUT</a></li>
             </ul>

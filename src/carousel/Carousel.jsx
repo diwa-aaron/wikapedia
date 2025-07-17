@@ -1,5 +1,6 @@
 import './Carousel.css'
 import Header from '../headbg/header.jsx'
+import Background from '../headbg/Background.jsx'
 import Card from './Card.jsx'
 import about from '../assets/about.png'
 import dialects from '../assets/dialects.png'
@@ -21,6 +22,7 @@ function Carousel() {
         <>
             {/*ADD HEADER*/}
             <Header/>
+            <Background/>
 
             {/*MABUHAY! HEADER*/}
             <div class='mabuhay'>
@@ -31,21 +33,33 @@ function Carousel() {
 
                 {/*SWIPER (CAROUSEL)*/}
                 <Swiper
-                    initialSlide={1} //START CAROUSEL ON SECOND SLIDE
-                    effect={'coverflow'}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    slidesPerView={3}
-                    coverflowEffect={{
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 150,
-                        modifier: 2.5,
-                        slideShadows: false,
-                    }}
-                    pagination={{ clickable: true }}
-                    modules={[EffectCoverflow, Pagination]}
-                    className="mySwiper">
+                initialSlide={1}
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                spaceBetween={0}
+                breakpoints={{
+                    0: {
+                    slidesPerView: 1,
+                    },
+                    600: {
+                    slidesPerView: 2,
+                    },
+                    900: {
+                    slidesPerView: 3,
+                    },
+                }}
+                coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 150,
+                    modifier: 2.5,
+                    slideShadows: false,
+                }}
+                pagination={{ clickable: true }}
+                modules={[EffectCoverflow, Pagination]}
+                className="mySwiper"
+                >
 
                     {/*PHILIPPINE DIALECTS CARD */}
                     <SwiperSlide className="card-slide">
