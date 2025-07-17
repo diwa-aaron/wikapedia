@@ -8,12 +8,13 @@
 }
 
 .container {
-  width: 1336px;
-  max-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 10vw;
+  position: relative;
+  background-color: #b16c6c;
 }
 
 .intro {
@@ -46,7 +47,10 @@
 }
 
 .ellipse {
-  background: linear-gradient(360deg, rgba(251, 209, 255, 1) 0%, rgba(198, 202, 253, 1) 100%);
+  background: linear-gradient(
+    360deg, 
+    rgba(251, 209, 255, 1) 0%, 
+    rgba(198, 202, 253, 1) 100%);
   border-radius: 50%;
   box-shadow: 0px 4px 33px #ffcdf4;
   width: 458px;
@@ -60,7 +64,7 @@
   width: 722px;
   height: 443px;
   object-fit: cover;
-  position: absolute;
+  position: relative;
   left: 0;
   top: 18px;
 }
@@ -73,8 +77,8 @@
   gap: 20px;
   padding-top: 40px;
   margin-left: 100px;
-  margin-right: 80px;
   width: auto;
+  background-color: #2c8c9f;
 }
 
 .heading {
@@ -108,4 +112,28 @@
 
 .list li {
   margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .ellipse {
+    width: 258px !important;
+    height: 239px !important;
+  }
+
+.image {
+  width: 522px !important;
+  height: 243px !important;
+}  
+}
+
+@media (max-width: 1100px) {
+  .ellipse {
+    width: 358px !important;
+    height: 339px !important;
+  }
+
+.image {
+  width: 622px !important;
+  height: 343px !important;
+}
 }
