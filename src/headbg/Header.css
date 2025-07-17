@@ -1,4 +1,9 @@
 /*HEADER DIV*/
+* {
+margin: 0;
+padding: 0;
+}
+
 .header {
     position: fixed;
     top: 0;
