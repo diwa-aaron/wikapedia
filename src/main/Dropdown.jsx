@@ -3,41 +3,38 @@ import './Main.css'
 function Dropdown() {
     return(
         <>
-            <select name="currency-select" class="currency-select">
+            {/*DROPDOWN*/}
+            <select name="language-select" class="language-select">
 
+                {/*SELECTED CONTENT OR WHAT IS PICKED*/}
                 <button>
                     <selectedcontent></selectedcontent>
                     <span class="arrow"></span>
                 </button>
 
+                {/*TAGALOG OPTION*/}
                 <option value="tagalog" selected>
-                    <div class="currency">
-                        <div>Tagalog</div>
-                    </div>
+                    <div>Tagalog</div>
                 </option>
 
+                {/*CEBUANO OPTION*/}
                 <option value="cebuano">
-                    <div class="currency">
                         <div>Cebuano</div>
-                    </div>
                 </option>
 
+                {/*ILOKANO OPTION*/}
                 <option value="ilokano">
-                    <div class="currency">
                         <div>Ilokano</div>
-                    </div>
                 </option>
 
+                {/*WARAY OPTION*/}
                 <option value="waray">
-                    <div class="currency">
                         <div>Waray</div>
-                    </div>
                 </option>
 
+                {/*PANGASINAN OPTION*/}
                 <option value="pangasinan">
-                    <div class="currency">
                         <div>Pangasinan</div>
-                    </div>
                 </option>
 
             </select>
