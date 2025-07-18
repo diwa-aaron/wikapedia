@@ -1,11 +1,11 @@
 import './Main.css'
 
-function TextArea() {
+function TextArea({ value, onChange, label }) {
     return(
         <>
             <div className='area'>
-                <h3>Tagalog</h3>
-                <textarea>ASDFASDF</textarea>
+                <h3>{label}</h3>
+                <textarea value={value} onChange={onChange}></textarea>
             </div>
         </>
     );
