@@ -1,14 +1,17 @@
+/*REMOVE SPACE FROM PAGE*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*MAIN BODY OF THE PAGE*/
 body {
     overflow-x: hidden;
     background-color: #FFFAFE;
 }
 
+/*DIV FOR THE WHOLE PAGE*/
 .container {
     display: block;
     width: 100%;
@@ -19,6 +22,7 @@ body {
     align-items: center;
 }
 
+/*DIV FOR THE TITLE*/
 .filipino {
     margin: 10vh 0 20px 0;
     color: #504B4E;
@@ -26,10 +30,12 @@ body {
     text-align: center;
 }
 
+/*HEADER (TITLE)*/
 h2 {
     font-size: clamp(1rem, 10vw, 1.75rem);
 }
 
+/*DIV FOR THE DROPDOWN AND BUTTON*/
 .dropdown {
     margin-bottom: 20px;
     display: grid;
@@ -37,6 +43,7 @@ h2 {
     width: 100%;
 }
 
+/*DROPDOWN AND BUTTON ALIGNMENT*/
 .dropdown > :nth-child(1) {
     justify-self: left;
 }
@@ -47,6 +54,7 @@ h2 {
     justify-self: right;
 }
 
+/*DIV FOR THE TEXT AREAS*/
 .translate {
     display: grid;
     grid-template-columns: auto auto;
@@ -55,6 +63,7 @@ h2 {
     position: relative; /* add this */
 }
 
+/*TEXTAREAS ALIGNMENT*/
 .translate > :nth-child(1) {
     justify-self: left;
 }
@@ -62,6 +71,7 @@ h2 {
     justify-self: right;
 }
 
+/*DIV FOR THE TRANSLATE BUTTON*/
 .translate-button {
     padding-left: 9.5vw;
     width: 100%;
@@ -144,9 +154,6 @@ h2 {
     }
 }
 
-
-
-
 /*DROPDOWN*/
 select,
 ::picker(select) {
@@ -156,13 +163,14 @@ select,
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/*REMOVE DEFAULT OPTIONS*/
 option::checkmark,
 select::picker-icon {
   display: none;
 }
 
 
-/* Styling the options list */
+/*STYLING THE OPTION LIST*/
 ::picker(select) {
     border-radius: 10px;
     margin-top: 0.5rem;
@@ -171,19 +179,22 @@ select::picker-icon {
     border: 1px solid #ececec;
 }
 
+/*STYLE FOR EACH OPTIONS*/
 option {
-  padding: 0.5rem 0.5rem;
-  border-radius: 10px;
-  margin: 10px;
-  /*  remove when patch is in  */
-  place-items: start;
-  
-  &:hover {
-    background-color: rgba(139, 112, 243, .30);
-  }
+    padding: 0.5rem 0.5rem;
+    border-radius: 10px;
+    margin: 10px;
+    /*  remove when patch is in  */
+    place-items: start;
+    transition: background-color 0.3s ease;
+
+    
+    &:hover {
+        background-color: rgba(139, 112, 243, .30);
+    }
 }
 
-/* Styles for both the options and selectedcontent */
+/*STYLES FOR BOTH OPTIONS AND SELECTED CONTENT*/
 option,
 selectedcontent {
     font-size: 1rem;
@@ -192,12 +203,13 @@ selectedcontent {
     gap: 1rem;
 }
 
-/* Style what you see before you open the select dropdown */
+/*STYLE WHAT YOU SEE BEFORE CLICKING THE DROPDOWN*/
 selectedcontent {
     padding: 0.5rem;
     grid-template-columns: 50px 30px;
 }
 
+/*STYLE FOR THE DROPDOWN*/
 select {
     border: none;
     border-radius: 10px;
@@ -206,6 +218,7 @@ select {
     cursor: pointer;
 }
 
+/*ARROW SVG*/
 .arrow {
     align-self: center;
     transition: rotate 1s;
@@ -217,12 +230,10 @@ select {
     width: 0.5rem;
     height: 0.5rem;
 
-    .currency-select:open & {
+    .language-select:open & {
         rotate: x 180deg;
     }
 }
-
-
 
 /*SWITCH BUTTON*/
 .switch {
@@ -231,18 +242,24 @@ select {
     border-radius: 50px;
     background: #98A2FF;
     cursor: pointer;
+    transition: background-color 0.5s ease;
 }
 
+.switch:hover {
+    background-color: rgba(139, 112, 243, .30);
+}
 
-/*TEXT AREA*/
+/*TEXT AREA DIV*/
 .area {
-    background-color: #FDB3FF;
+    position: relative;
+    background-color: #7B87F6;
     border-radius: 20px;
     width: 30vw;
     height: 35dvh;
     box-shadow: 0px 60px 8px rgba(0, 0, 0, 0.2);
 }
 
+/*ACTUAL TEXT AREA*/
 textarea {
     margin-top: 30px;
     width: 100%; 
@@ -256,20 +273,35 @@ textarea {
     color: rgba(0, 0, 0, 0.5);
 }
 
-h3 {
+/*FOR WHAT LANGUAGE IS PICKED*/
+h4 {
     position: relative;
-    top: 5%;
-    left: 6%;
-    color: #504B4E;
+    top: 4.5%;
+    left: 5%;
+    color: #FFFAFE;
 }
+
+/*COPY BUTTON*/
+.area svg{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
 
 /*TRANSLATE BUTTON*/
 .translatebtn {
     padding: 13px 40px;
     font-weight: bold;
-    background: linear-gradient(to right, #5c8df6, #9ba9ff);
+    background: #7B87F6;
     border: none;
     border-radius: 50px;
     color: white;
     cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.translatebtn:hover {
+    background: rgba(139, 112, 243, .30);
 }

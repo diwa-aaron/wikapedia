@@ -1,6 +1,7 @@
 import './Header.css'
 import logo from '../assets/logo.png'
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
 
@@ -14,6 +15,8 @@ function Header() {
     setSidebarVisible(false);
   };
   
+  const navigate = useNavigate();
+
   return (
     <>
         <header>
@@ -22,9 +25,9 @@ function Header() {
               {/*HEADER*/}
               <li><img src={logo} alt="Wikapedia logo" className="logo" /></li>
               <li class="wikapedia">Wikapedia</li>
-              <li class= "hide"><a href="#">HOME</a></li>
-              <li class= "hide"><a href="#">DIALECTS</a></li>
-              <li class= "hide"><a href="#">ABOUT</a></li>
+              <li class= "hide"><a onClick={() => navigate("/")}>HOME</a></li>
+              <li class= "hide"><a onClick={() => navigate("/Dialects")}>DIALECTS</a></li>
+              <li class= "hide"><a onClick={() => navigate("/About")}>ABOUT</a></li>
 
               {/*MENU BUTTON WHEN PAGE IS SMALL*/}
               {!isSidebarVisible && (
@@ -49,9 +52,9 @@ function Header() {
 
             {/*SIDEBAR*/}
             <ul className={`sidebar ${isSidebarVisible ? 'show' : ''}`}>
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">DIALECTS</a></li>
-              <li><a href="#">ABOUT</a></li>
+              <li><a onClick={() => navigate("/")}>HOME</a></li>
+              <li><a onClick={() => navigate("/Dialects")}>DIALECTS</a></li>
+              <li><a onClick={() => navigate("/About")}>ABOUT</a></li>
             </ul>
 
             {/*BLUR BACKGROUND */}

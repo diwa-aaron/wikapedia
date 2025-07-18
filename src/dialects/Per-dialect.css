@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .section {
   background-color: #ffffff;
   display: flex;
@@ -14,7 +19,6 @@
   align-items: center;
   padding-top: 10vw;
   position: relative;
-  background-color: #b16c6c;
 }
 
 .intro {
@@ -26,7 +30,7 @@
 .title {
   color: #7b87f6;
   font-family: "Montserrat-ExtraBold", Helvetica, sans-serif;
-  font-size: 48px;
+  font-size: clamp(2rem, 10vw, 3.25rem);
   font-weight: 800;
   margin-bottom: 10px;
 }
@@ -41,9 +45,9 @@
 
 .image-wrapper {
   position: relative;
-  width: 722px;
-  height: 461px;
   margin-bottom: 60px;
+  width: 458px;
+  height: 449px;
 }
 
 .ellipse {
@@ -53,20 +57,18 @@
     rgba(198, 202, 253, 1) 100%);
   border-radius: 50%;
   box-shadow: 0px 4px 33px #ffcdf4;
-  width: 458px;
-  height: 439px;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  left: 143px;
-  top: 0;
 }
 
 .image {
-  width: 722px;
-  height: 443px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   position: relative;
   left: 0;
-  top: 18px;
+  overflow: visible;
 }
 
 .content {
@@ -75,10 +77,8 @@
   align-items: flex-start;
   text-align: left;
   gap: 20px;
-  padding-top: 40px;
-  margin-left: 100px;
+  padding: 40px 7vw;
   width: auto;
-  background-color: #2c8c9f;
 }
 
 .heading {
@@ -114,26 +114,11 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 600px) {
-  .ellipse {
-    width: 258px !important;
-    height: 239px !important;
-  }
-
-.image {
-  width: 522px !important;
-  height: 243px !important;
-}  
-}
-
-@media (max-width: 1100px) {
-  .ellipse {
-    width: 358px !important;
-    height: 339px !important;
-  }
-
-.image {
-  width: 622px !important;
-  height: 343px !important;
-}
+@media(max-width: 1100px) {
+    .image-wrapper {
+        width: 70vw;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
 }
