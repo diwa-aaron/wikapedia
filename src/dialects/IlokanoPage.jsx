@@ -21,7 +21,7 @@ function IlokanoPage() {
             <img className="image" alt="Ilokano Dialect" src={Ilokano} />
           </div>
 
-          <div className="content">
+          <div className="contents">
 
             <h2 className="heading">Overview</h2>
             <p className="paragraph">

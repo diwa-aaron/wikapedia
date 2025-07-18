@@ -21,7 +21,7 @@ function PangasinanPage() {
             <img className="image" alt="Pangasinan Dialect" src={Pangasinan} />
           </div>
 
-          <div className="content">
+          <div className="contents">
 
             <h2 className="heading">Overview</h2>
             <p className="paragraph">

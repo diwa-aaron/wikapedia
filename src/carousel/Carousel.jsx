@@ -5,6 +5,7 @@ import Card from './Card.jsx'
 import about from '../assets/about.png'
 import dialects from '../assets/dialects.png'
 import translate from '../assets/translate.png'
+import { useNavigate } from 'react-router-dom';
 
 //IMPORT SWIPER REACT COMPONENTS
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,6 +19,7 @@ import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 function Carousel() {
+    const navigate = useNavigate();
     return (
         <>
             {/*ADD HEADER*/}
@@ -62,7 +64,7 @@ function Carousel() {
                 >
 
                     {/*PHILIPPINE DIALECTS CARD */}
-                    <SwiperSlide className="card-slide">
+                    <SwiperSlide className="card-slide" onClick={() => navigate('/dialects')}>
                         <Card
                             image={dialects}
                             title="Philippine Dialects"
@@ -71,7 +73,7 @@ function Carousel() {
                     </SwiperSlide>
 
                     {/*TRANSLATE CARD */}
-                    <SwiperSlide className="card-slide">
+                    <SwiperSlide className="card-slide" onClick={() => navigate('/main')}>
                         <Card
                             image={translate}
                             title="Translate"
@@ -80,7 +82,7 @@ function Carousel() {
                     </SwiperSlide>
 
                     {/*ABOUT WIKAPEDIA CARD */}
-                    <SwiperSlide >
+                    <SwiperSlide className="card-slide" onClick={() => navigate("/About")}>
                         <Card
                             image={about}
                             title="About Wikapedia"

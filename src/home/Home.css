@@ -2,11 +2,10 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 /*MAIN BODY OF THE PAGE*/
-body{
+.home-container{
     min-height: 100dvh;
     background: #FFFAFE;
 }
@@ -55,23 +54,22 @@ body{
 /*TEXT AND BUTTON DIV*/
 .content {
     position: absolute;
-    top: 35%;
-    margin-left: 0.5vw; 
+    top: 30%;
     align-items: center;
     max-width: 40%;
     color: #504B4E;
-    padding: 0 10% 0 10%;
+    padding-left: 5.5%;
 }
 
 /*HEADER (TITLE)*/
-h1 {
+.home-container h1 {
     font-size: clamp(1.8rem, 10vw, 5rem);
     font-weight: 800;
     margin-bottom: 10px;
 }
 
 /*PARAGRAPH (DESCRIPTION)*/
-p {
+.home-container p {
     color: #000000;
     opacity: 50%;
 }
@@ -83,7 +81,7 @@ p {
     font-weight: bold;
     background: linear-gradient(to right, #5c8df6, #9ba9ff);
     border: none;
-    border-radius: 50px;
+    border-radius: 15px;
     color: #FFFFFF;
     cursor: pointer;
     display: flex;
@@ -105,7 +103,7 @@ p {
         width: 80vw;
         max-width: 100%;
         height: auto;
-        opacity: 50%;
+        opacity: 25%;
     }
 
     .curved-background {
@@ -114,20 +112,28 @@ p {
     }
 
     .content {
+        width: 90%;
         margin: 0 !important;
         left: 50%;
-        transform: translateX(-50%);
-        right: auto;
+        top: 50%;
+        transform: translate(-50%, -50%);
 
-        text-align: center;
+        padding: 0;
+
+        text-align: center !important;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center !important;
         flex-direction: column;
     }
 
-    button {
-        font-size: 1rem; /* adjust as needed to prevent line break */
+    .content button {
+        font-size: 0.75rem; /* adjust as needed to prevent line break */
         white-space: nowrap; /* optional: prevents the text from wrapping */
+        margin-top: 30px;
+    }
+
+    .home-container h1 {
+        margin-bottom: 0;
     }
 }

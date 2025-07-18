@@ -6,10 +6,10 @@ import waray_dialect from "../assets/waray_dialect.jpg"
 import pangasinan_dialect from "../assets/pangasinan_dialect.png"
 import ilocano_dialect from "../assets/ilocano_dialect.jpg"
 import wikapedia_header from "../assets/wikapedia_header.png"
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Dialects() {
-    {/*const navigate = useNavigate();*/}
+    const navigate = useNavigate();
 
     return (
         <>
@@ -38,7 +38,7 @@ function Dialects() {
                             the Filipino national language. It is used in everyday conversation,
                             media, and education across the country.
                         </p>
-                        <div className="button" >
+                        <div className="button" onClick={() => navigate('/tagalog')}>
                             <div className="button_text">Learn More</div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@ function Dialects() {
                             and Mindanao. It has a strong presence in local culture, songs, and
                             storytelling.
                         </p>
-                        <div className="button" >
+                        <div className="button" onClick={() => navigate('/cebuano')}>
                             <div className="button_text">Learn More</div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ function Dialects() {
                             literary and oral traditions. It reflects the values and lifestyle
                             of Ilocano communities.
                         </p>
-                        <div className="button">
+                        <div className="button" onClick={() => navigate('/ilokano')}>
                             <div className="button_text">Learn More</div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ function Dialects() {
                             It is lively and expressive, often heard during local festivals like
                             Pintados-Kasadyaan.
                         </p>
-                        <div className="button">
+                        <div className="button" onClick={() => navigate('/waray')}>
                             <div className="button_text">Learn More</div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ function Dialects() {
                             areas. It carries the rich history and traditions of coastal and
                             agricultural life.
                         </p>
-                        <div className="button">
+                        <div className="button" onClick={() => navigate('/pangasinan')}>
                             <div className="button_text">Learn More</div>
                         </div>
                     </div>

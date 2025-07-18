@@ -21,7 +21,7 @@ function TagalogPage() {
             <img className="image" alt="Tagalog Dialect" src={Tagalog} />
           </div>
 
-          <div className="content">
+          <div className="contents">
 
             <h2 className="heading">Overview</h2>
             <p className="paragraph">
